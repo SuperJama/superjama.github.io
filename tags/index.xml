@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Flower Dance</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Aug 2019 23:32:23 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 31 Aug 2019 22:46:57 +0800</lastBuildDate>
     
 	<atom:link href="https://superjama.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>PAT</title>
+      <link>https://superjama.github.io/tags/pat/</link>
+      <pubDate>Sat, 31 Aug 2019 22:46:57 +0800</pubDate>
+      
+      <guid>https://superjama.github.io/tags/pat/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>AI</title>

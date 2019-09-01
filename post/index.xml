@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Flower Dance</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Aug 2019 23:32:23 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 31 Aug 2019 22:46:57 +0800</lastBuildDate>
     
 	<atom:link href="https://superjama.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>PAT经验总结篇</title>
+      <link>https://superjama.github.io/2019/08/pat%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93%E7%AF%87/</link>
+      <pubDate>Sat, 31 Aug 2019 22:46:57 +0800</pubDate>
+      
+      <guid>https://superjama.github.io/2019/08/pat%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93%E7%AF%87/</guid>
+      <description>&lt;p&gt;此blog为作者在备考pat考试时的所感所想，希望通过这篇文章让同样备考pat的道友们能够取得更好的分数。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>机器学习之基础库（一）</title>

@@ -8,39 +8,37 @@
 <meta name="generator" content="Hugo 0.57.2 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Flower Dance">
 <meta name="keywords" content="tech, 考研, HH, AI">
-<meta name="description" content="这是一篇关于机器学习sklearn库的学习笔记。">
+<meta name="description" content="此blog为作者在备考pat考试时的所感所想，希望通过这篇文章让同样备考pat的道友们能够取得更好的分数。">
 
 
-<meta property="og:description" content="这是一篇关于机器学习sklearn库的学习笔记。">
+<meta property="og:description" content="此blog为作者在备考pat考试时的所感所想，希望通过这篇文章让同样备考pat的道友们能够取得更好的分数。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="机器学习之基础库（一）">
-<meta name="twitter:title" content="机器学习之基础库（一）">
-<meta property="og:url" content="https://superjama.github.io/2019/08/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%9F%BA%E7%A1%80%E5%BA%93%E4%B8%80/">
-<meta property="twitter:url" content="https://superjama.github.io/2019/08/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%9F%BA%E7%A1%80%E5%BA%93%E4%B8%80/">
+<meta property="og:title" content="PAT经验总结篇">
+<meta name="twitter:title" content="PAT经验总结篇">
+<meta property="og:url" content="https://superjama.github.io/2019/08/pat%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93%E7%AF%87/">
+<meta property="twitter:url" content="https://superjama.github.io/2019/08/pat%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93%E7%AF%87/">
 <meta property="og:site_name" content="Flower Dance">
-<meta property="og:description" content="这是一篇关于机器学习sklearn库的学习笔记。">
-<meta name="twitter:description" content="这是一篇关于机器学习sklearn库的学习笔记。">
+<meta property="og:description" content="此blog为作者在备考pat考试时的所感所想，希望通过这篇文章让同样备考pat的道友们能够取得更好的分数。">
+<meta name="twitter:description" content="此blog为作者在备考pat考试时的所感所想，希望通过这篇文章让同样备考pat的道友们能够取得更好的分数。">
 <meta property="og:locale" content="zh-cn">
 
   
-    <meta property="article:published_time" content="2019-08-30T23:32:23">
+    <meta property="article:published_time" content="2019-08-31T22:46:57">
   
   
-    <meta property="article:modified_time" content="2019-08-30T23:32:23">
+    <meta property="article:modified_time" content="2019-08-31T22:46:57">
   
-  
-  
-    
-      <meta property="article:section" content="人工智能学习">
-    
-      <meta property="article:section" content="sklearn库">
-    
   
   
     
-      <meta property="article:tag" content="AI">
+      <meta property="article:section" content="学习">
     
-      <meta property="article:tag" content="sklearn">
+      <meta property="article:section" content="PAT">
+    
+  
+  
+    
+      <meta property="article:tag" content="PAT">
     
   
 
@@ -53,12 +51,12 @@
 
 
 
-  <meta property="og:image" content="https://superjama.github.io/images/AI_s.jpg">
-  <meta property="twitter:image" content="https://superjama.github.io/images/AI_s.jpg">
+  <meta property="og:image" content="https://superjama.github.io/images/pat_s.jpg">
+  <meta property="twitter:image" content="https://superjama.github.io/images/pat_s.jpg">
 
 
-  <meta property="og:image" content="https://superjama.github.io/images/AI.jpeg">
-  <meta property="twitter:image" content="https://superjama.github.io/images/AI.jpeg">
+  <meta property="og:image" content="https://superjama.github.io/images/pat.jpg">
+  <meta property="twitter:image" content="https://superjama.github.io/images/pat.jpg">
 
 
 
@@ -67,14 +65,14 @@
   <meta property="twitter:image" content="https://superjama.github.io/images/1.jpg">
 
 
-    <title>机器学习之基础库（一）</title>
+    <title>PAT经验总结篇</title>
 
     <link rel="icon" href="https://superjama.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://superjama.github.io/2019/08/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%9F%BA%E7%A1%80%E5%BA%93%E4%B8%80/">
+    <link rel="canonical" href="https://superjama.github.io/2019/08/pat%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93%E7%AF%87/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -216,7 +214,7 @@
   <div class="post-header-cover
               text-center
               post-header-cover--full"
-       style="background-image:url('/images/AI.jpeg')"
+       style="background-image:url('/images/pat.jpg')"
        data-behavior="5">
     
   </div>
@@ -228,21 +226,21 @@
                hasCoverCaption">
         <article class="post" itemscope itemType="http://schema.org/BlogPosting">
           
-            <span class="post-header-cover-caption caption">AI真的能够代替人类吗？</span>
+            <span class="post-header-cover-caption caption">文章cover图片描述</span>
           
           
             <div class="post-header main-content-wrap text-center">
   
     <h1 class="post-title" itemprop="headline">
-      机器学习之基础库（一）
+      PAT经验总结篇
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2019-08-30T23:32:23&#43;08:00">
+      <time itemprop="datePublished" datetime="2019-08-31T22:46:57&#43;08:00">
         
-  八月 30, 2019
+  八月 31, 2019
 
       </time>
     
@@ -251,9 +249,9 @@
   
     <span>发布在</span>
     
-      <a class="category-link" href="https://superjama.github.io/categories/%e4%ba%ba%e5%b7%a5%e6%99%ba%e8%83%bd%e5%ad%a6%e4%b9%a0">人工智能学习</a>, 
+      <a class="category-link" href="https://superjama.github.io/categories/%e5%ad%a6%e4%b9%a0">学习</a>, 
     
-      <a class="category-link" href="https://superjama.github.io/categories/sklearn%e5%ba%93">sklearn库</a>
+      <a class="category-link" href="https://superjama.github.io/categories/pat">PAT</a>
     
   
 
@@ -263,241 +261,60 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>这是一篇关于机器学习sklearn库的学习笔记。</p>
+              <p>此blog为作者在备考pat考试时的所感所想，希望通过这篇文章让同样备考pat的道友们能够取得更好的分数。</p>
 
 <h1 id="table-of-contents">目录</h1><nav id="TableOfContents">
 <ul>
-<li><a href="#1-1-数据预处理">1.1 数据预处理</a>
+<li><a href="#1-c-c的一些需要注意的地方">1 C++/C的一些需要注意的地方</a>
 <ul>
-<li><a href="#前的均需实例化-前需加实例化的对象"><code>'='前的均需实例化， .前需加实例化的对象</code></a></li>
-<li><a href="#1-1-1-均值移除">1.1.1 均值移除</a>
-<ul>
-<li><a href="#通过使用sklearn库的preprocessing包-br">通过使用sklearn库的preprocessing包<br></a></li>
+<li><a href="#1-1-变量">1.1 变量</a></li>
+<li><a href="#1-2-浮点数的比较-考虑误差">1.2 浮点数的比较(考虑误差)</a></li>
 </ul></li>
-<li><a href="#1-1-2-范围缩放">1.1.2 范围缩放</a>
-<ul>
-<li><a href="#通过使用sklearn库的preprocessing函数-br">通过使用sklearn库的preprocessing函数<br></a></li>
-</ul></li>
-<li><a href="#1-1-3-归一化">1.1.3 归一化</a></li>
-<li><a href="#1-1-4-二值化">1.1.4 二值化</a></li>
-<li><a href="#1-1-5-独热编码">1.1.5 独热编码</a></li>
-</ul></li>
-<li><a href="#1-2-标记编码方法">1.2 标记编码方法</a>
-<ul>
-<li>
-<ul>
-<li><a href="#通过sklearn库的preprocessing包">通过sklearn库的preprocessing包</a>
-<ul>
-<li><a href="#创建标记"><code>创建标记</code></a></li>
-<li><a href="#反编辑"><code>反编辑</code></a></li>
-</ul></li>
-</ul></li>
-</ul></li>
-<li><a href="#1-3-创建线性回归器">1.3 创建线性回归器</a>
-<ul>
-<li><a href="#此处仅介绍相关函数的用法">此处仅介绍相关函数的用法</a>
-<ul>
-<li><a href="#open">open()</a></li>
-<li><a href="#linear-modal-linearregression-在sklearn库">linear_modal.LinearRegression()(在sklearn库)</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#1-4-计算回归准确性">1.4 计算回归准确性</a>
-<ul>
-<li>
-<ul>
-<li><a href="#round">round()</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#1-5-保存模型数据">1.5 保存模型数据</a></li>
-<li><a href="#1-6-创建岭回归器">1.6 创建岭回归器</a>
-<ul>
-<li>
-<ul>
-<li><a href="#linear-modal-ridge-在sklearn库">linear_modal.Ridge()(在sklearn库)</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#1-7-创建多项式回归器">1.7 创建多项式回归器</a>
-<ul>
-<li>
-<ul>
-<li><a href="#polynomialfeatures-在sklearn-preprocessing包中">PolynomialFeatures()（在sklearn.preprocessing包中）</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#1-8-其它回归器">1.8 其它回归器</a>
-<ul>
-<li><a href="#1-8-1-决策树回归器-adaboost算法">1.8.1 决策树回归器 + AdaBoost算法</a></li>
-<li><a href="#1-8-2-随机森林回归器">1.8.2 随机森林回归器</a></li>
-</ul></li>
-<li><a href="#1-9-sklearn官网">1.9 sklearn官网</a></li>
 </ul>
 </nav>
 
-<h1 id="1-1-数据预处理">1.1 数据预处理</h1>
+<h1 id="1-c-c的一些需要注意的地方">1 C++/C的一些需要注意的地方</h1>
 
-<h2 id="前的均需实例化-前需加实例化的对象"><code>'='前的均需实例化， .前需加实例化的对象</code></h2>
+<h2 id="1-1-变量">1.1 变量</h2>
 
-<h2 id="1-1-1-均值移除">1.1.1 均值移除</h2>
+<pre><code>变量的定义：
+变量类型 变量名; /// 可以同时初始化
 
-<h3 id="通过使用sklearn库的preprocessing包-br">通过使用sklearn库的preprocessing包<br></h3>
+变量类型：
+int         取值范围：-2^31~2^31-1 (-2*10^9~2*10^9);   在scanf()和printf()中的格式：%d;    ///其中%?md可以确定最少输出m位，?为填充
+long long   取值范围：-2^63~2^63-1 (-2*10^18~2*10^18); 在scanf()和printf()中的格式：%lld   ///%?md用法同上
+float       取值范围：-2^128~2^128 (实际精度6～7位);     在scanf()和printf()中的格式：%f     ///%.mf可以确定保留小数点后m位(不是四舍五入)
+double      取值范围：-2^1024~2^1024 (实际精度15～16位); 在scanf()和printf()中的格式：%lf   ///%.mld用法同上
+char        取值范围：-128~127     ();                 在scanf()和printf()中的格式：%c
+bool        取值范围：0 or 1       (false true);
+char[]      ---										 在scanf()和printf()中的格式：%s
 
-<pre><code>= preprocessing.scale(data) ///data为需要处理的数据（一般为数组）
-.mean(axis=) ///mean为输出均值，axis为维数
-.std(axis=) ///std为输出标准差
+数组变量定义：
+变量类型 变量名[]; /// 可以同时初始化
+
+输入与输出：
+ep：scanf(&quot;%d&quot;, &amp;a); /// &amp;符不可少，但可在数组名前可省略
+可在&quot;&quot;中自定输入格式
+需注意：%c可以读入空格；%s可以空格结束
+
+ep：printf(&quot;%d&quot;, a);
+需注意：转义字符\
+
+ep：char a = getchar(); ///读入一个字符('\n', ' '皆能读入)
+需注意：在使用getchar()读入字符串时，需加'\0'作为结尾
+
+ep：putchar(a); /// 输入a
+
+ep：gets(str); ///读入字符串(以'\n'结束)
+
+ep：puts(str); /// 输出字符串
+
+赋值memeset()：
+ep：memeset(a, 0, sizeof(a)); /// 只建议使用此法赋初值 0 / -1
+
 </code></pre>
 
-<h2 id="1-1-2-范围缩放">1.1.2 范围缩放</h2>
-
-<h3 id="通过使用sklearn库的preprocessing函数-br">通过使用sklearn库的preprocessing函数<br></h3>
-
-<pre><code>data_scaler = preprocessing.MinMaxScaler(feature_range=(0,1)) ///feature_range为缩放范围
-data_scaled = data_scaler.fit_transform(data) ///fit_transform为训练数据和转换数据
-</code></pre>
-
-<h2 id="1-1-3-归一化">1.1.3 归一化</h2>
-
-<pre><code>= preprocessing.normalize(data, norm='l1') ///norm将特征向量调整到L1范数
-.fit_transform(data) ///用法与1.1.2相同
-</code></pre>
-
-<h2 id="1-1-4-二值化">1.1.4 二值化</h2>
-
-<pre><code>preprocessing.Binarizer(threshold=1.4).transform(data) ///threshold将数据分割开， 此处x&lt;=1.4为0
-</code></pre>
-
-<h2 id="1-1-5-独热编码">1.1.5 独热编码</h2>
-
-<pre><code>= preprocessing.OneHotEncoder() 
-.fit(data) ///传入数据 
-.transform([[x,x,x]]).toarray() /// xxx为需要编码的位置，toarray类型转换
-</code></pre>
-
-<h1 id="1-2-标记编码方法">1.2 标记编码方法</h1>
-
-<h3 id="通过sklearn库的preprocessing包">通过sklearn库的preprocessing包</h3>
-
-<h4 id="创建标记"><code>创建标记</code></h4>
-
-<pre><code>label_encoder = preprocessing.LabelEncoder() 
-input_classes = ['audi', 'ford', 'audi', 'toyota', 'ford', 'bmw'] 
-label_encoder.fit(input_classes) 
-print &quot;\nClass mapping:&quot; 
-for i, item in enumerate(label_encoder.classes_): 
-print item, '--&gt;', i
-</code></pre>
-
-<h4 id="反编辑"><code>反编辑</code></h4>
-
-<pre><code>labels = ['toyota', 'ford', 'audi']
-encoded_labels = label_encoder.transform(labels)
-print &quot;\nLabels =&quot;, labels
-print &quot;Encoded labels =&quot;, list(encoded_labels)
-</code></pre>
-
-<h1 id="1-3-创建线性回归器">1.3 创建线性回归器</h1>
-
-<h2 id="此处仅介绍相关函数的用法">此处仅介绍相关函数的用法</h2>
-
-<h3 id="open">open()</h3>
-
-<pre><code>n(filename, ' ') ///filename为文件地址， ' '为相关操作
-</code></pre>
-
-<p>操作有：&rsquo;r&rsquo;; &lsquo;rb&rsquo;; &lsquo;r+&rsquo;; &lsquo;rb+&rsquo;; &lsquo;w&rsquo;; &lsquo;wb&rsquo;; &lsquo;w+&rsquo;; &lsquo;wb+&rsquo;; &lsquo;a&rsquo;; &lsquo;ab&rsquo;; &lsquo;a+&rsquo;; &lsquo;ab+&rsquo;; <br></p>
-
-<h3 id="linear-modal-linearregression-在sklearn库">linear_modal.LinearRegression()(在sklearn库)</h3>
-
-<pre><code>= linear_modal.LinearRegression() ///创建线性回归对象
-.fit(X_train, y_train) ///训练数据
-.predict(X_test) ///预测
-</code></pre>
-
-<h1 id="1-4-计算回归准确性">1.4 计算回归准确性</h1>
-
-<p><code>平均绝对误差，均方误差，中位数绝对误差越小越好</code>
-<code>解释方差分，R方得分  越趋近于1越好</code></p>
-
-<h3 id="round">round()</h3>
-
-<pre><code>round(data, x)  ///将数据data精确到小数点后两位
-</code></pre>
-
-<pre><code>import sklearn.metrics as sm
-round(sm.mean_absolute_error(y_test, y_test_pred), 2) ///平均绝对误差
-round(sm.mean_squared_error(y_test, y_ test_pred), 2) ///均方误差
-round(sm.median_absolute_error(y_ test, y_test_pred),2) ///中位数绝对误差
-round(sm.explained_variance_ score(y_test,y_test_pred), 2)  ///解释方差分
-round(sm.r2_score(y_test, y_test_pred), 2)  ///R方得分
-</code></pre>
-
-<h1 id="1-5-保存模型数据">1.5 保存模型数据</h1>
-
-<pre><code>///保存
-import pickle
-output_model_file = 'saved_model.pkl'
-with open(output_model_file, 'w') as f:
-pickle.dump(linear_regressor, f)
-///加载
-with open(output_model_file, 'r') as f:
-model_linregr = pickle.load(f)
-y_test_pred_new = model_linregr.predict(X_test)
-</code></pre>
-
-<p>主要时pickle.dump()和pickle.load()的问题</p>
-
-<h1 id="1-6-创建岭回归器">1.6 创建岭回归器</h1>
-
-<p><code>主要用于减弱对异常值的敏感度</code></p>
-
-<h3 id="linear-modal-ridge-在sklearn库">linear_modal.Ridge()(在sklearn库)</h3>
-
-<pre><code>= linear_model.Ridge(alpha=0.01, fit_intercept=True, max_iter=10000)
-=   .fit(X_train, y_train)
-.predict(X_test)
-</code></pre>
-
-<p>其中，alpha控制回归器复杂度，fit_intercept为是否使用截距，max_iter为最大迭代次数<br></p>
-
-<h1 id="1-7-创建多项式回归器">1.7 创建多项式回归器</h1>
-
-<h3 id="polynomialfeatures-在sklearn-preprocessing包中">PolynomialFeatures()（在sklearn.preprocessing包中）</h3>
-
-<pre><code>= PolynomialFeatures(degree=3)
-=   .fit_transform(X_train)
-= linear_model.LinearRegression()
-.fit(X_, y_)
-</code></pre>
-
-<p>degree为多项式的次数，若想预测值接近输出值需要增大degree<br></p>
-
-<h1 id="1-8-其它回归器">1.8 其它回归器</h1>
-
-<h2 id="1-8-1-决策树回归器-adaboost算法">1.8.1 决策树回归器 + AdaBoost算法</h2>
-
-<pre><code>from sklearn.tree import DecisionTreeRegressor
-from sklearn.ensemble import AdaBoostRegressor
-= DecisionTreeRegressor(max_depth=4)
-.fit(X_train, y_train)
-.predict()
-= AdaBoostRegressor(DecisionTreeRegressor(max_depth=4),n_estimators=400, random_state=7)
-.fit(X_train, y_train)
-.predict()
-</code></pre>
-
-<p>max_depth为最大深度，n_estimators为最大估计数，random_state为随机种子数<br></p>
-
-<h2 id="1-8-2-随机森林回归器">1.8.2 随机森林回归器</h2>
-
-<pre><code>from sklearn.ensemble import RandomForestRegressor
-= RandomForestRegressor(n_estimators=1000, max_depth=10,min_samples_split=1)
-.fit(X_train, y_train)
-.predict(X_test)
-</code></pre>
-
-<p>n_estimators为森林里树的数量，max_depth为最大深度，min_samples_split为拆分内部节点所需的最小样本数<br></p>
-
-<h1 id="1-9-sklearn官网">1.9 sklearn官网</h1>
-
-<p><a href="https://scikit-learn.org/stable/index.html">https://scikit-learn.org/stable/index.html</a></p>
+<h2 id="1-2-浮点数的比较-考虑误差">1.2 浮点数的比较(考虑误差)</h2>
               
             </div>
           </div>
@@ -509,9 +326,7 @@ from sklearn.ensemble import AdaBoostRegressor
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">标签</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://superjama.github.io/tags/ai/">AI</a>
-
-  <a class="tag tag--primary tag--small" href="https://superjama.github.io/tags/sklearn/">sklearn</a>
+  <a class="tag tag--primary tag--small" href="https://superjama.github.io/tags/pat/">PAT</a>
 
                   </div>
                 
@@ -524,7 +339,7 @@ from sklearn.ensemble import AdaBoostRegressor
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://superjama.github.io/2019/08/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%9F%BA%E7%A1%80%E5%BA%93%E4%B8%80/" data-tooltip="机器学习之基础库（一）">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -532,7 +347,7 @@ from sklearn.ensemble import AdaBoostRegressor
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://superjama.github.io/2019/08/pat%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93%E7%AF%87/" data-tooltip="PAT经验总结篇">
+                <a class="post-action-btn btn btn--disabled">
               
                   <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                   <i class="fa fa-angle-right"></i>
@@ -592,7 +407,7 @@ from sklearn.ensemble import AdaBoostRegressor
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://superjama.github.io/2019/08/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%9F%BA%E7%A1%80%E5%BA%93%E4%B8%80/" data-tooltip="机器学习之基础库（一）">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -600,7 +415,7 @@ from sklearn.ensemble import AdaBoostRegressor
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://superjama.github.io/2019/08/pat%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93%E7%AF%87/" data-tooltip="PAT经验总结篇">
+                <a class="post-action-btn btn btn--disabled">
               
                   <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                   <i class="fa fa-angle-right"></i>
@@ -732,9 +547,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/superjama.github.io\/2019\/08\/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%9F%BA%E7%A1%80%E5%BA%93%E4%B8%80\/';
+          this.page.url = 'https:\/\/superjama.github.io\/2019\/08\/pat%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93%E7%AF%87\/';
           
-            this.page.identifier = '\/2019\/08\/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%9F%BA%E7%A1%80%E5%BA%93%E4%B8%80\/'
+            this.page.identifier = '\/2019\/08\/pat%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93%E7%AF%87\/'
           
         };
         (function() {

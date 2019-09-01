@@ -6,10 +6,28 @@
     <description>Recent content in Categories on Flower Dance</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Aug 2019 23:32:23 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 31 Aug 2019 22:46:57 +0800</lastBuildDate>
     
 	<atom:link href="https://superjama.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>PAT</title>
+      <link>https://superjama.github.io/categories/pat/</link>
+      <pubDate>Sat, 31 Aug 2019 22:46:57 +0800</pubDate>
+      
+      <guid>https://superjama.github.io/categories/pat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>学习</title>
+      <link>https://superjama.github.io/categories/%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Sat, 31 Aug 2019 22:46:57 +0800</pubDate>
+      
+      <guid>https://superjama.github.io/categories/%E5%AD%A6%E4%B9%A0/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>sklearn库</title>
