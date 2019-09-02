@@ -270,7 +270,10 @@
 <li><a href="#1-1-变量">1.1 变量</a></li>
 <li><a href="#1-2-浮点数的比较-考虑误差">1.2 浮点数的比较(考虑误差)</a>
 <ul>
-<li><a href="#持续更新中">持续更新中&hellip;</a></li>
+<li>
+<ul>
+<li><a href="#持续更新中">持续更新中&hellip;&hellip;</a></li>
+</ul></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -315,11 +318,28 @@ ep：puts(str); /// 输出字符串
 赋值memeset()：
 ep：memeset(a, 0, sizeof(a)); /// 只建议使用此法赋初值 0 / -1
 
+赋值 fill():
+ep：fill(a, a + 10, 2); /// 将a[10]中所有元素赋值为‘2’
+
 </code></pre>
 
 <h2 id="1-2-浮点数的比较-考虑误差">1.2 浮点数的比较(考虑误差)</h2>
 
-<h3 id="持续更新中">持续更新中&hellip;</h3>
+<blockquote>
+<p>由于计算机中采用有限位的二进制编码，因此浮点数在计算机中的存储并不总是精确的。
+为了将这极小的误差消除，我们可以引入一个极小数eps(一般取1e-8较为合适)。</p>
+</blockquote>
+
+<p><code>设定义两个变量a，b:</code><br />
+<code>等于操作：a - b &lt; eps;</code><br />
+<code>大于操作：a - b &gt; eps;</code><br />
+<code>小于操作：a - b &lt; -eps;</code><br />
+<code>大于等于操作：a - b &gt; -eps;</code><br />
+<code>小于等于操作：a - b &lt; eps;</code></p>
+
+<p><code>π = acos(-1.0);</code></p>
+
+<h4 id="持续更新中">持续更新中&hellip;&hellip;</h4>
               
             </div>
           </div>
