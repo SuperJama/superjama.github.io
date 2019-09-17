@@ -305,27 +305,27 @@ char[]      ---	                  ---                在scanf()和printf()中的
 变量类型 变量名[]; /// 可以同时初始化
 
 输入与输出：
-ep：scanf(&quot;%d&quot;, &amp;a); /// &amp;符不可少，但可在数组名前可省略
+eg：scanf(&quot;%d&quot;, &amp;a); /// &amp;符不可少，但可在数组名前可省略
 可在&quot;&quot;中自定输入格式
 需注意：%c可以读入空格；%s可以空格结束
 
-ep：printf(&quot;%d&quot;, a);
+eg：printf(&quot;%d&quot;, a);
 需注意：转义字符\
 
-ep：char a = getchar(); ///读入一个字符('\n', ' '皆能读入)
+eg：char a = getchar(); ///读入一个字符('\n', ' '皆能读入)
 需注意：在使用getchar()读入字符串时，需加'\0'作为结尾
 
-ep：putchar(a); /// 输入a
+eg：putchar(a); /// 输入a
 
-ep：gets(str); ///读入字符串(以'\n'结束)
+eg：gets(str); ///读入字符串(以'\n'结束)
 
-ep：puts(str); /// 输出字符串
+eg：puts(str); /// 输出字符串
 
 赋值memeset()：
-ep：memeset(a, 0, sizeof(a)); /// 只建议使用此法赋初值 0 / -1
+eg：memeset(a, 0, sizeof(a)); /// 只建议使用此法赋初值 0 / -1
 
 赋值 fill():
-ep：fill(a, a + 10, 2); /// 将a[10]中所有元素赋值为‘2’
+eg：fill(a, a + 10, 2); /// 将a[10]中所有元素赋值为‘2’
 
 </code></pre>
 
