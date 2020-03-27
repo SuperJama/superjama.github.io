@@ -4,26 +4,41 @@
   
   <url>
     <loc>https://superjama.github.io/categories/</loc>
-    <lastmod>2020-03-27T12:07:43+08:00</lastmod>
+    <lastmod>2020-03-27T16:31:25+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://superjama.github.io/</loc>
-    <lastmod>2020-03-27T12:07:43+08:00</lastmod>
+    <lastmod>2020-03-27T16:31:25+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://superjama.github.io/2020/03/hugo%E5%8A%A0%E8%BD%BD%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/</loc>
+    <lastmod>2020-03-27T16:31:25+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://superjama.github.io/post/</loc>
-    <lastmod>2020-03-27T12:07:43+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://superjama.github.io/categories/python/</loc>
-    <lastmod>2020-03-27T12:07:43+08:00</lastmod>
+    <lastmod>2020-03-27T16:31:25+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://superjama.github.io/tags/</loc>
+    <lastmod>2020-03-27T16:31:25+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://superjama.github.io/tags/%E7%BB%8F%E9%AA%8C/</loc>
+    <lastmod>2020-03-27T16:31:25+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://superjama.github.io/categories/%E7%BB%8F%E9%AA%8C/</loc>
+    <lastmod>2020-03-27T16:31:25+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://superjama.github.io/categories/python/</loc>
     <lastmod>2020-03-27T12:07:43+08:00</lastmod>
   </url>
   
@@ -53,12 +68,12 @@
   </url>
   
   <url>
-    <loc>https://superjama.github.io/tags/2048/</loc>
+    <loc>https://superjama.github.io/categories/2048/</loc>
     <lastmod>2019-09-01T12:06:57+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://superjama.github.io/categories/2048/</loc>
+    <loc>https://superjama.github.io/tags/2048/</loc>
     <lastmod>2019-09-01T12:06:57+08:00</lastmod>
   </url>
   
