@@ -382,13 +382,15 @@ def minDistance(h, w, times, new_h, new_w):
 
 <p>双线性插值是两个linear插值组合使用的形式其下图是其原理：
 <img src="https://pic.downk.cc/item/5e7f5c46504f4bcb04942b88.jpg" alt="原理图1" />
-假设P点为要求像素的点，Q11 = (x1, y1)、Q12 = (x1, y2), Q21 = (x2, y1) 以及 Q22 = (x2, y2)分别是它旁边的四个点，想要求P点的像素，需先求R1和R2的像素（第一次linear插值），之后根据R1，R2求得P点的像素。公式如下：
+假设P点为要求像素的点，Q11 = (x1, y1)、Q12 = (x1, y2), Q21 = (x2, y1) 以及 Q22 = (x2, y2)分别是它旁边的四个点，想要求P点的像素，需先求R1和R2的像素（第一次linear插值），之后根据R1，R2求得P点的像素。公式如下：</p>
+
 <div>$$
-f(R_1) = {x_2 - x \over x_2 - x<em>1} * f(Q</em>{11}) + {x - x_1 \over x_2 - x<em>1} * f(Q</em>{21}) <br />
-f(R_2) = {x_2 - x \over x_2 - x<em>1} * f(Q</em>{12}) + {x - x_1 \over x_2 - x<em>1} * f(Q</em>{22}) <br />
+f(R_1) = {x_2 - x \over x_2 - x_1} * f(Q_{11}) + {x - x_1 \over x_2 - x_1} * f(Q_{21}) \\
+f(R_2) = {x_2 - x \over x_2 - x_1} * f(Q_{12}) + {x - x_1 \over x_2 - x_1} * f(Q_{22}) \\
 f(P) = {y_2 - y \over y_2 - y_1} * f(R_1) + {y - y_1 \over y_2 - y_1} * f(R_2)
 $$</div>
-由于图像双线性插值只会用相邻的4个点，因此上述公式的分母都是1。
+
+<p>由于图像双线性插值只会用相邻的4个点，因此上述公式的分母都是1。
 实现如下：</p>
 
 <pre><code></code></pre>
