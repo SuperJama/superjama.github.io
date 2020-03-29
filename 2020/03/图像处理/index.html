@@ -395,11 +395,11 @@ $$</div>
 设P = （x, y）其在原图像的位置为（x / times, y / times）。设其左上角原图像像素为（i ,j），则P点在原图像的位置为（i + u, j + v），i、j为整数，u、v为小数。
 上述公式可用矩阵表示：</p>
 
-<p>$$
+<div>$$
 f(P) = [1-v, v]
-\left[\begin{matrix} f(Q<em>{11}) &amp; f(Q</em>{21}) \ f(Q<em>{12}) &amp; f(Q</em>{22}) \end{matrix}\right]
+\left[\begin{matrix} f(Q_{11}) & f(Q_{21}) \\ f(Q_{12}) & f(Q_{22}) \end{matrix}\right]
 [1-u, u]^T
-$$</p>
+$$</div>
 
 <p>实现如下：</p>
 
@@ -412,32 +412,32 @@ $$</p>
 <p>即插值点的像素由其周围16个点的像素值共同决定。
 Bicubic函数公式为：</p>
 
-<p>$$
+<div>$$
 S(x) = \begin{cases}
-(a+2)|x|^3-(a+3)|x|^2+1, &amp; 0\le|x|\le1 \
-a|x|^3-5a|x|^2+8a|x|-4a, &amp; 1\le|x|\le2 \
-0, &amp; other
+(a+2)|x|^3-(a+3)|x|^2+1, & 0\le|x|\le1 \\ 
+a|x|^3-5a|x|^2+8a|x|-4a, & 1\le|x|\le2 \\ 
+0, & other
 \end{cases}
-$$</p>
+$$</div>
 
 <p>本算法取a=-0.5效果最佳。
 点（x, y）像素值可由下面公式获得：</p>
 
-<p>$$
-f(x, y) = f(i+u, j+v) = A*B*C <br />
+<div>$$
+f(x, y) = f(i+u, j+v) = A*B*C \\
 A= [\begin{matrix}
-S(u+1) &amp; S(u) &amp; S(u-1) &amp; S(u-2)
-\end{matrix}] <br />
+S(u+1) & S(u) & S(u-1) & S(u-2)
+\end{matrix}] \\
 B= \left[\begin{matrix}
-f(i-1, j-1)&amp;f(i-1,j)&amp;f(i−1, j+1)&amp;f (i−1, j+2) <br />
-f(i,j−1)&amp;f(i,j)&amp;f(i,j+1)&amp;f(i,j+2) <br />
-f(i+1, j−1) &amp;f(i+1, j) &amp;f(i+1, j+1) &amp;f(i+1, j+2) <br />
-f(i+2, j−1)&amp;f(i+2, j) &amp;f(i+2, j+1) &amp;f(i+2, j+2)
-\end{matrix}\right] <br />
+f(i-1, j-1)&f(i-1,j)&f(i−1, j+1)&f (i−1, j+2) \\
+f(i,j−1)&f(i,j)&f(i,j+1)&f(i,j+2) \\
+f(i+1, j−1) &f(i+1, j) &f(i+1, j+1) &f(i+1, j+2) \\
+f(i+2, j−1)&f(i+2, j) &f(i+2, j+1) &f(i+2, j+2)
+\end{matrix}\right] \\
 C=[\begin{matrix}
-S(v+1) &amp; S(v) &amp; S(v-1) &amp; S(v-2)
+S(v+1) & S(v) & S(v-1) & S(v-2)
 \end{matrix}]^T
-$$</p>
+$$</div>
 
 <p>(x, y)是缩放后的图像的像素点位置，将其除以缩放倍数即可得到(i+u, j+v)。
 坐标i、j为非负整数，u、v是浮点数，取值在[0,1)之间。
