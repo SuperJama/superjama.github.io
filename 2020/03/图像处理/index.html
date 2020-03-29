@@ -304,6 +304,7 @@ code.has-jax {
 <ul>
 <li><a href="#最近邻差值-nearest-neighbor-interpolation">最近邻差值（Nearest Neighbor Interpolation）</a></li>
 <li><a href="#双线性插值法">双线性插值法</a></li>
+<li><a href="#双三次插值-bicubic插值">双三次插值（BiCubic插值）</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -380,7 +381,7 @@ def minDistance(h, w, times, new_h, new_w):
 
 <h2 id="双线性插值法">双线性插值法</h2>
 
-<p>双线性插值是两个linear插值组合使用的形式其下图是其原理：
+<p>双线性插值是两个linear插值组合使用的形式，其下图是其原理：
 <img src="https://pic.downk.cc/item/5e7f5c46504f4bcb04942b88.jpg" alt="原理图1" />
 假设P点为要求像素的点，Q11 = (x1, y1)、Q12 = (x1, y2), Q21 = (x2, y1) 以及 Q22 = (x2, y2)分别是它旁边的四个点，想要求P点的像素，需先求R1和R2的像素（第一次linear插值），之后根据R1，R2求得P点的像素。公式如下：</p>
 
@@ -391,11 +392,57 @@ f(P) = {y_2 - y \over y_2 - y_1} * f(R_1) + {y - y_1 \over y_2 - y_1} * f(R_2)
 $$</div>
 
 <p>由于图像双线性插值只会用相邻的4个点，因此上述公式的分母都是1。
-实现如下：</p>
+设P = （x, y）其在原图像的位置为（x / times, y / times）。设其左上角原图像像素为（i ,j），则P点在原图像的位置为（i + u, j + v），i、j为整数，u、v为小数。
+上述公式可用矩阵表示：</p>
+
+<p>$$
+f(P) = [1-v, v]
+\left[\begin{matrix} f(Q<em>{11}) &amp; f(Q</em>{21}) \ f(Q<em>{12}) &amp; f(Q</em>{22}) \end{matrix}\right]
+[1-u, u]^T
+$$</p>
+
+<p>实现如下：</p>
 
 <pre><code></code></pre>
 
 <p>参考于：<a href="https://blog.csdn.net/qq_37577735/article/details/80041586">https://blog.csdn.net/qq_37577735/article/details/80041586</a></p>
+
+<h2 id="双三次插值-bicubic插值">双三次插值（BiCubic插值）</h2>
+
+<p>即插值点的像素由其周围16个点的像素值共同决定。
+Bicubic函数公式为：</p>
+
+<p>$$
+S(x) = \begin{cases}
+(a+2)|x|^3-(a+3)|x|^2+1, &amp; 0\le|x|\le1 \
+a|x|^3-5a|x|^2+8a|x|-4a, &amp; 1\le|x|\le2 \
+0, &amp; other
+\end{cases}
+$$</p>
+
+<p>本算法取a=-0.5效果最佳。
+点（x, y）像素值可由下面公式获得：</p>
+
+<p>$$
+f(x, y) = f(i+u, j+v) = A*B*C <br />
+A= [\begin{matrix}
+S(u+1) &amp; S(u) &amp; S(u-1) &amp; S(u-2)
+\end{matrix}] <br />
+B= \left[\begin{matrix}
+f(i-1, j-1)&amp;f(i-1,j)&amp;f(i−1, j+1)&amp;f (i−1, j+2) <br />
+f(i,j−1)&amp;f(i,j)&amp;f(i,j+1)&amp;f(i,j+2) <br />
+f(i+1, j−1) &amp;f(i+1, j) &amp;f(i+1, j+1) &amp;f(i+1, j+2) <br />
+f(i+2, j−1)&amp;f(i+2, j) &amp;f(i+2, j+1) &amp;f(i+2, j+2)
+\end{matrix}\right] <br />
+C=[\begin{matrix}
+S(v+1) &amp; S(v) &amp; S(v-1) &amp; S(v-2)
+\end{matrix}]^T
+$$</p>
+
+<p>(x, y)是缩放后的图像的像素点位置，将其除以缩放倍数即可得到(i+u, j+v)。
+坐标i、j为非负整数，u、v是浮点数，取值在[0,1)之间。
+示意图：
+<img src="https://pic.downk.cc/item/5e7ffe80504f4bcb04ec9008.jpg" alt="原理图2" /></p>
               
             </div>
           </div>
