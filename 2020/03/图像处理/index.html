@@ -403,9 +403,48 @@ $$</div>
 
 <p>实现如下：</p>
 
-<pre><code></code></pre>
+<pre><code>'''双线性差值'''
+def BilinearInterpolation(img, times=2):
+    # height and width of the input img
+    h, w = img.shape[0], img.shape[1]
+    # renew an image
+    new_h, new_w = int(h*times), int(w*times)
+    new_img = np.zeros((new_h, new_w, 3), dtype='uint8')
+    # insert pixel to new image
+    for y in range(new_h):
+        for x in range(new_w):
+            i, j = int(x / times), int(y / times)
+            u, v = x / times - i, y / times - j
+            array_y = np.asarray([[1-v, v]])
+            array_x = np.asarray([[1-u, u]]).T
+            if i+1 == w or j+1 == h:
+                temp = [[img[i, j, :], img[i, j, :]], [img[i, j, :], img[i, j, :]]]
+            else:
+                #temp = [[img[i, j, :], img[i, j+1, :]], [img[i+1, j, :], img[i+1, j+1, :]]]
+                temp = [[img[i, j, :], img[i + 1, j, :]], [img[i, j + 1, :], img[i+1, j + 1, :]]]
+            array = np.asarray(temp)
+            new_img[x, y] = mydot(mydot(array_y, array), array_x)
 
-<p>参考于：<a href="https://blog.csdn.net/qq_37577735/article/details/80041586">https://blog.csdn.net/qq_37577735/article/details/80041586</a></p>
+    return new_img
+
+def mydot(array1, array2):
+    h, w = array1.shape[0], array1.shape[1]
+    new_array = np.zeros((array1.shape[0], array2.shape[1], 3))
+    for i in range(h):
+        for col in range(array2.shape[1]):
+            sum = np.zeros(3)
+            for j in range(w):
+                 sum += array1[i][j] * array2[j][col]
+
+            new_array[i][col] = sum
+    #print(new_array.shape)
+    return new_array
+</code></pre>
+
+<p>结果：
+<img src="https://pic.downk.cc/item/5e81555f504f4bcb04e25ba8.jpg" alt="结果2" />
+可以明显看出锯齿减少。
+参考于：<a href="https://blog.csdn.net/qq_37577735/article/details/80041586">https://blog.csdn.net/qq_37577735/article/details/80041586</a></p>
 
 <h2 id="双三次插值-bicubic插值">双三次插值（BiCubic插值）</h2>
 
